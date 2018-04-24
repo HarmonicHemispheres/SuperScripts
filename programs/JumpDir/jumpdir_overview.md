@@ -27,7 +27,7 @@ OPTIONAL: Adjust the parameter `MAX_HIST_LEN = 100` in `jd.py` if you want the s
 
 NOTE: paths stored are unique and are not duplicates.
 
-#### Step 3: move files and set paths
+#### Step 3: add path to current environment
 Add the following code to your shell rc (i.e. ~/.bashrc) file to include the script to your current environment. This allows the program to run cd in the current environment to other directories.
 
 `source /path/to/jd`      or       `. /path/to/jd`
