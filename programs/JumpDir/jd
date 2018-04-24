@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+# This script must be added to the current environment to funtion properly
+# todo this simply add the following line to your shell rc file
+# ussually located at (i.e. ~/.bashrc)
+# 
+# source /path/to/jd   or   . /path/to/jd
+#
+# In addition to this, verify that the two paths below
+# are correct for jd.py and .jd-hist
+# 
+PROG=/path/to/jd.py
+HIST=/path/to/.jd-hist
+
+function jd() {
+    if [ "$1" = "--show" ]
+        then 
+            $PROG $HIST $1
+        else
+            if [ -z "$1" ]
+                then 
+                    cd ~
+                else
+                    cd "$($PROG $HIST $1)"
+            fi
+    fi
+}
+
